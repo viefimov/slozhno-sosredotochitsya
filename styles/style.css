@@ -175,6 +175,9 @@ article {
     padding-left: 20px;
     padding-right: 20px;
   }
+  body {
+    gap: 60px;
+  }
   main h2 {
     min-width: 236px;
     max-width: 236px;

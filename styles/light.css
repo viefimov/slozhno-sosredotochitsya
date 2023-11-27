@@ -9,16 +9,14 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  background-color: #FFF1F7;
+  background-image: var(--background-img);
 }
 
 :root .theme_light {
   --background-img: url("../images/cover-image-light.png");
   --accent-color: #ff8dcb;
   --text-color: #353430;
-}
-
-.page.theme_light {
-  background-image: var(--background-img);
 }
 
 .theme_light .title_decor {
@@ -58,7 +56,7 @@
   border-block-end: 1px solid #353430;
 }
 
-.theme_light .link:hover {
+.theme_light .link:focus {
   outline: 1px solid #353430;
   outline-offset: 1px;
 }
@@ -84,6 +82,7 @@
     --text-color: #353430;
   }
   .page {
+    background-color: #FFF1F7;
     background-image: var(--background-img);
   }
   .title_decor {
@@ -125,7 +124,7 @@
   .link:hover {
     border-block-end: 1px solid #353430;
   }
-  .link:hover {
+  .link:focus {
     outline: 1px solid #353430;
     outline-offset: 1px;
   }
