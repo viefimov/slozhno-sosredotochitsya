@@ -263,4 +263,7 @@ article {
   main h2 {
     min-width: 315px;
   }
+  .section_gap:nth-of-type(2) article {
+    min-width: 315px;
+  }
 }
