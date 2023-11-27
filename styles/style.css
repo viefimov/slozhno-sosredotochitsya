@@ -2,4 +2,261 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header {
+  height: 100vh;
+  padding: 10px;
+}
+
+footer {
+  height: 100vh;
+  padding: 10px;
+  display: flex;
+}
+main h2,
+h3,
+h4,
+p,
+a {
+  font-size: 18px;
+  line-height: 130%;
+  font-family: "IBM Plex Mono";
+}
+p,
+h4 {
+  font-weight: 400;
+}
+main h2,
+h3 {
+  font-weight: 700;
+}
+.footer_title {
+  margin: auto;
+}
+
+button {
+  background: transparent;
+  border: none;
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: lowercase;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+header,
+footer {
+  position: relative;
+}
+header:before,
+footer:before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  box-sizing: border-box;
+  position: absolute;
+  inset-inline-end: 10px;
+}
+
+header:after,
+footer:after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  box-sizing: border-box;
+  position: absolute;
+  inset-block-end: 10px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.page_title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 82.5%;
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+}
+
+.page_title_absolute {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 0;
+  z-index: -5;
+}
+
+.grid_header {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+nav {
+  margin-top: 65px;
+  align-self: end;
+  justify-self: start;
+}
+
+.header_phraze {
+  align-self: end;
+  max-width: 491px;
+  margin-bottom: 55px;
+  width: clamp(355px, 50%, 491px);
+}
+
+.header__theme-menu-item {
+  height: 28px;
+  width: 70px;
+}
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section_gap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.image_block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.article_gap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (width >= 768px) {
+  header,
+  footer {
+    padding: 20px;
+  }
+  main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  main h2 {
+    min-width: 236px;
+    max-width: 236px;
+  }
+  .page_title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  .section_gap:nth-of-type(2) {
+    flex-direction: column;
+  }
+  .section_gap {
+    flex-direction: row;
+  }
+  .image_block {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .page_title_absolute {
+    left: -20px;
+  }
+  .image_block .image_sunset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-column: span 2;
+  }
+  .image_block .image_icecream {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-row: span 2;
+  }
+  .image_block .image_tape {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-row: span 2;
+  }
+  .image_block .image_books {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .image_block .image_street {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-column: span 2;
+  }
+  header:before,
+  footer:before {
+    inset-inline-end: 20px;
+  }
+  header:after,
+  footer:after {
+    inset-block-end: 20px;
+  }
+  .header_phraze {
+    margin-bottom: 162px;
+  }
+  nav {
+    margin-top: 172px;
+  }
+}
+
+@media (width>=1024px) {
+  .section_gap:nth-of-type(2) .article_gap {
+    flex-direction: row;
+  }
+  .header_phraze {
+    margin-bottom: 114px;
+  }
+  nav {
+    align-self: center;
+    margin-top: 0;
+  }
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+  main h2 {
+    min-width: 315px;
+  }
 }

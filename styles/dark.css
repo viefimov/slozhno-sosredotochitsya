@@ -10,3 +10,192 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+:root .theme_dark {
+  --background-img: url("../images/cover-image-dark.png");
+  --accent-color: #ff0070;
+  --text-color: #f1b2ce;
+  --title-color: #000028;
+}
+
+.page.theme_dark {
+  background-color: #000028;
+  background-image: var(--background-img);
+}
+
+.theme_dark .title_decor {
+  background-color: var(--accent-color);
+}
+
+.theme_dark .title_accent,
+.theme_dark button {
+  color: var(--accent-color);
+}
+
+.theme_dark p {
+  color: var(--text-color);
+}
+
+.theme_dark h3,
+.theme_dark h4 {
+  color: var(--title-color);
+}
+
+.theme_dark .header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.theme_dark .header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.4);
+}
+
+.theme_dark .header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.theme_dark .page_title {
+  color: #db00ff;
+  text-shadow: 4px 4px 0px var(--accent-color);
+}
+
+.theme_dark .easter_egg {
+  box-sizing: border-box;
+  position: absolute;
+  inset-inline-end: calc(28px + 10px);
+  inset-block-start: 10px;
+}
+@media (width >= 768px) {
+  .theme_dark .easter_egg {
+    inset-inline-end: calc(28px + 20px);
+    inset-block-start: 20px;
+  }
+}
+.theme_dark .easter_egg:before {
+  content: "REC";
+  color: var(--accent-color);
+  line-height: 25px;
+  font-size: 18px;
+  font-family: "IBM Plex Mono";
+  font-weight: 400;
+}
+
+.theme_dark .easter_egg:after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  fill: var(--accent-color);
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  position: absolute;
+  inset-inline-end: -19px;
+  inset-block-start: 8px;
+  filter: drop-shadow(0px 0px 4px #ff0070);
+}
+.theme_dark header:before,
+.theme_dark footer:before,
+.theme_dark header:after,
+.theme_dark footer:after {
+  border-color: var(--accent-color);
+}
+
+.theme_dark .link {
+  text-shadow: 1px 1px 0px #ff0070;
+}
+
+.theme_dark .link:hover {
+  border-block-end: 1px solid #f1b2ce;
+}
+
+.theme_dark .link:focus {
+  outline: 1px solid #f1b2ce;
+  outline-offset: 1px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-img: url("../images/cover-image-dark.png");
+    --accent-color: #ff0070;
+    --text-color: #f1b2ce;
+    --title-color: #000028;
+  }
+  .page {
+    background-image: var(--background-img);
+  }
+  .title_decor {
+    background-color: var(--accent-color);
+  }
+  .title_accent,
+  button {
+    color: var(--accent-color);
+  }
+  p {
+    color: var(--text-color);
+  }
+  h3,
+  h4 {
+    color: var(--title-color);
+  }
+  .header__theme-menu-button_active {
+    border: 1px solid var(--accent-color);
+  }
+  .header__theme-menu-button:hover {
+    border: 1px solid rgba(255, 0, 112, 0.4);
+  }
+  .header__theme-menu-button:focus {
+    border-bottom: 1px solid var(--accent-color);
+    outline: none;
+  }
+  .page_title {
+    color: #db00ff;
+    text-shadow: 4px 4px 0px var(--accent-color);
+  }
+  header:before,
+  footer:before,
+  header:after,
+  footer:after {
+    border-color: var(--accent-color);
+  }
+  .easter_egg {
+    box-sizing: border-box;
+    position: absolute;
+    inset-inline-end: calc(28px + 10px);
+    inset-block-start: 10px;
+  }
+  .link {
+    text-shadow: 1px 1px 0px #ff0070;
+  }
+  .link:hover {
+    border-block-end: 1px solid #f1b2ce;
+  }
+  .link:focus {
+    outline: 1px solid #f1b2ce;
+    outline-offset: 1px;
+  }
+  @media (width >= 768px) {
+    .easter_egg {
+      inset-inline-end: calc(28px + 20px);
+      inset-block-start: 20px;
+    }
+  }
+  .easter_egg:before {
+    content: "REC";
+    color: var(--accent-color);
+    line-height: 25px;
+    font-size: 18px;
+    font-family: "IBM Plex Mono";
+    font-weight: 400;
+  }
+  .easter_egg:after {
+    content: "";
+    width: 9px;
+    height: 9px;
+    fill: var(--accent-color);
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    inset-inline-end: -19px;
+    inset-block-start: 8px;
+    filter: drop-shadow(0px 0px 4px #ff0070);
+  }
+}

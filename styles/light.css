@@ -10,3 +10,123 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+:root .theme_light {
+  --background-img: url("../images/cover-image-light.png");
+  --accent-color: #ff8dcb;
+  --text-color: #353430;
+}
+
+.page.theme_light {
+  background-image: var(--background-img);
+}
+
+.theme_light .title_decor {
+  background-color: var(--accent-color);
+}
+
+.theme_light h2,
+.theme_light h3,
+.theme_light h4,
+.theme_light p,
+.theme_light button {
+  color: var(--text-color);
+}
+
+.theme_light .header__theme-menu-button_active {
+  border: 1px solid var(--text-color);
+}
+
+.theme_light .header__theme-menu-button:hover {
+  border: 1px solid rgba(50, 49, 45, 0.4);
+}
+.theme_light .header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--text-color);
+  outline: none;
+}
+
+.theme_light .page_title {
+  color: #ffc2e6;
+  text-shadow: 4px 4px 0px var(--accent-color);
+}
+
+.theme_light .link {
+  text-shadow: 1px 1px 0px #ff8dcb;
+}
+
+.theme_light .link:hover {
+  border-block-end: 1px solid #353430;
+}
+
+.theme_light .link:hover {
+  outline: 1px solid #353430;
+  outline-offset: 1px;
+}
+
+@media (width >=1024px) {
+  .theme_light .page_title {
+    text-shadow: 4px 4px 0px #ff0070;
+  }
+}
+.theme_light .easter_egg {
+  display: none;
+}
+.theme_light header:before,
+.theme_light footer:before,
+.theme_light header:after,
+.theme_light footer:after {
+  border-color: var(--text-color);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-img: url("../images/cover-image-light.png");
+    --accent-color: #ff8dcb;
+    --text-color: #353430;
+  }
+  .page {
+    background-image: var(--background-img);
+  }
+  .title_decor {
+    background-color: var(--accent-color);
+  }
+  h2,
+  h3,
+  h4,
+  p,
+  button {
+    color: var(--text-color);
+  }
+  .header__theme-menu-button_active {
+    border: 1px solid var(--text-color);
+  }
+  .header__theme-menu-button:hover {
+    border: 1px solid rgba(50, 49, 45, 0.4);
+  }
+  .header__theme-menu-button:focus {
+    border-bottom: 1px solid var(--text-color);
+    outline: none;
+  }
+  .page_title {
+    color: #ffc2e6;
+    text-shadow: 4px 4px 0px var(--accent-color);
+  }
+  header:before,
+  footer:before,
+  header:after,
+  footer:after {
+    border-color: var(--text-color);
+  }
+  .theme_auto .easter_egg {
+    display: none;
+  }
+  .link {
+    text-shadow: 1px 1px 0px #ff8dcb;
+  }
+  .link:hover {
+    border-block-end: 1px solid #353430;
+  }
+  .link:hover {
+    outline: 1px solid #353430;
+    outline-offset: 1px;
+  }
+}
