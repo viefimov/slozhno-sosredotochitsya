@@ -10,7 +10,6 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   background-color: #000028;
-  background-image: var(--background-img);
 }
 
 :root .theme_dark {
@@ -18,6 +17,7 @@
   --accent-color: #ff0070;
   --text-color: #f1b2ce;
   --title-color: #000028;
+  --font-family: "IBM Plex Mono", monospace;
 }
 
 .theme_dark .title_decor {
@@ -73,7 +73,7 @@
   color: var(--accent-color);
   line-height: 25px;
   font-size: 18px;
-  font-family: "IBM Plex Mono";
+  font-family: var(--font-family);
   font-weight: 400;
 }
 
@@ -118,7 +118,6 @@
   }
   .page {
     background-color: #000028;
-    background-image: var(--background-img);
   }
   .title_decor {
     background-color: var(--accent-color);
@@ -181,7 +180,7 @@
     color: var(--accent-color);
     line-height: 25px;
     font-size: 18px;
-    font-family: "IBM Plex Mono";
+    font-family: var(--font-family);
     font-weight: 400;
   }
   .easter_egg:after {

@@ -9,8 +9,7 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  background-color: #FFF1F7;
-  background-image: var(--background-img);
+  background-color: #fff1f7;
 }
 
 :root .theme_light {
@@ -82,8 +81,7 @@
     --text-color: #353430;
   }
   .page {
-    background-color: #FFF1F7;
-    background-image: var(--background-img);
+    background-color: #fff1f7;
   }
   .title_decor {
     background-color: var(--accent-color);
