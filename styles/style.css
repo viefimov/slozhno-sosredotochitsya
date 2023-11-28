@@ -191,6 +191,9 @@ article {
   .section_gap {
     flex-direction: row;
   }
+  .article_images {
+    gap:20px;
+  }
   .image_block {
     display: grid;
     width: 100%;
